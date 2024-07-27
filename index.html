@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>首頁</title>
+    <!-- .代表class  -->
     <style>
-        <!-- .  -->
-        .banner{
-            background-color: rgb(51, 114, 0);
-            color: rgb(255, 161, 39);
+        body{
+            background-color: rgb(81, 167, 179);
+            font-family: '標楷體', Times, serif;
         }
+
+        #title{
+            color: rgb(68, 0, 255);
+            background-color: rgb(166, 255, 0);
+            font-size: 4rem;
+            margin: 24px;
+            margin-top: 60px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .banner{
+            width: 200px;
+            display: inline block;
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 161, 39);
+            font-size: 12px 24px;
+            padding-left: 24px;
+        }
+
         h2{
             background-color: blue;
             color: burlywood;
         }
 
+        .text_left{
+            text-align: left;
+        }
 
     </style>
 
@@ -22,7 +45,7 @@
 </head>
 <!-- 內容顯示區 -->
 <body>
-    <h1 style="color: rgb(68, 0, 255);background-color: rgb(166, 255, 0);"   >我愛健身網站</h1>
+    <div id="title">我愛健身網站</div>
     <a target="_blank"  href="https://preview.520cc.com/auto_machine/20201216/3f58b0e6-1228-4134-8533-0423bc600e13.jpg!w800_520cc_water">
         <img src="https://preview.520cc.com/auto_machine/20201216/3f58b0e6-1228-4134-8533-0423bc600e13.jpg!w800_520cc_water" alt="找不到圖片" width="100%">
     </a>
@@ -52,7 +75,7 @@
     </p>
     <hr >
 
-    <h2 class="banner">健身的10個好處</h2>
+    <div class="text_left">健身的10個好處</div>
     <ol type="1">
         <li>增加基礎代謝率</li>
         <li>預防疾病和提高免疫力</li>
@@ -89,9 +112,9 @@
     </li>
     <hr>
     <!-- 本地圖片 -->
-    <img src="images/pic-1.jpg" alt="" width="32%">
-    <img src="images/pic-2.jpg" alt="" width="32%">
-    <img src="images/pic-3.jpg" alt="" width="32%">
+    <img src="images/pic-1.jpg" alt="" width="30%">
+    <img src="images/pic-2.jpg" alt="" width="30%">
+    <img src="images/pic-3.jpg" alt="" width="30%">
 
     <h2>一天所需卡路里</h2>
 
@@ -141,9 +164,10 @@
     </p>
 
     <h2>健身影片</h2>
-    <iframe width="49%" src="https://www.youtube.com/embed/AshBwc9W_Sc" title="請國宴大師還原《中華小當家》彈跳甲魚湯！把湯做成玻璃球你敢信嗎？| 老飯骨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="49%" src="https://www.youtube.com/embed/ZkkGeESXj0Y" title="【兔宝宝100成长记录】从一团肉球长成逆天颜值，每只都毛茸茸的，超可爱！【天下一场梦】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+    <div>
+    <iframe width="47%" src="https://www.youtube.com/embed/AshBwc9W_Sc" title="請國宴大師還原《中華小當家》彈跳甲魚湯！把湯做成玻璃球你敢信嗎？| 老飯骨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="47%" src="https://www.youtube.com/embed/ZkkGeESXj0Y" title="【兔宝宝100成长记录】从一团肉球长成逆天颜值，每只都毛茸茸的，超可爱！【天下一场梦】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <!-- 本地影片 -->
     <video width="100%" src="video/sample_video (240p).mp4" controls></video>
 </body>
