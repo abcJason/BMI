@@ -8,7 +8,7 @@
     <style>
         form{
             background-color: rgb(67, 170, 35);
-            width: 400px;
+            width: 60%;
             margin:  0 auto;
             padding: 16px;
             color: white;
@@ -18,18 +18,31 @@
 
         input{
             margin: 6px 0;
-            width: 200px;
+            width: 70%;
         }
 
         button{
             background-color: aqua;
             border: 0px;
-            width: 80px;
+            width: 25%;
             padding: 3px;
             border-radius: 5px;
-            color: rgb(255, 0, 0);
+            color: rgb(0, 0, 0);
         }
 
+        @media screen and (max-width: 468px){
+            from {
+                width: 80%;
+            }
+            input{
+                width: 90;
+            }
+        }
+        @media screen and (max-width: 768px){
+            from {
+                width: 50%;
+            }
+        }
     </style>
 
 </head>
