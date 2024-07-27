@@ -4,15 +4,44 @@
     <meha charset="UTF-8">
     <meha name="viewport" content="width=device-widt">
     <title>BMI計算機</title>
+    <link rel="stylesheet" href="res/style.css">
+    <style>
+        form{
+            background-color: rgb(67, 170, 35);
+            width: 400px;
+            margin:  0 auto;
+            padding: 16px;
+            color: white;
+            border: 2px white solid;
+            border-radius: 15px;
+        }
+
+        input{
+            margin: 6px 0;
+            width: 200px;
+        }
+
+        button{
+            background-color: aqua;
+            border: 0px;
+            width: 80px;
+            padding: 3px;
+            border-radius: 5px;
+            color: rgb(255, 0, 0);
+        }
+
+    </style>
+
 </head>
 <body>
-    <h1>BMI計算機</h1>
-    <form>
+    <div class="banner">BMI計算機</div>
+    <form >
         <label for="username">姓名</label>
         <input id="username" name="username" type="text" placeholder="jason"><br>
         <label for="password">密碼</label>
         <input id="password" name="password" type="password" value="1234"><br>
-        <input name="date" type="date">生日<br>
+        <label name="date" type="date">生日</label>
+        <input id="date" type="date"><br>
         <label for="height">身高</label>
         <input id="height" step="0.1" name="height" type="number" value="180"><br>
         <label for="weight">體重</label>
