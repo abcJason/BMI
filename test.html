@@ -33,20 +33,60 @@
         document.write(result);
         alert(result);
 
-        let name=prompt("請輸入姓名:cm");
-        let heght=prompt("請輸入身高:cm");
-        let w=prompt("請輸入體重:kg");
-        const h=heght/100;
-        let bmi=w/h**2;
-        // const result_BMI="<br>"+name+"的BMI為: "+bmi.toFixed(2);
-        const result_BMI="<h1>"+name+"</h1>";
-        console.log(result_BMI);
-        document.write(result_BMI);
-        document.write(`<h1>${name}</h1>`);
-        document.write(`<li>${w}</li>`);
-        document.write(`<li>${h}</li>`);
-        document.write(`<li>${bmi}</li>`);
-        alert(result_BMI);
+       
+        // for(let i=0;i<3;i++){
+        let count=0;
+        let total=0;
+        while(true)
+        {
+            if(count==1){ 
+                break;
+            }
+            let name=prompt("請輸入姓名:");
+            let heght=prompt("請輸入身高:cm");
+            let weight=prompt("請輸入體重:kg");
+
+            // 身高/體重 輸入不能為空
+            // or => ||
+            // and => &&
+            if(heght=="" || weight==""){
+                alert("未輸入身高/體重!");
+                continue;
+            }
+            // 身高/體重 1~500
+            // not => !
+            if(!isValid(heght,1,300) || !isValid(weight,1,500)){
+                alert("身高只能1~300，體重只能1~500");
+            } else {
+                let bmi=weight/(heght/100)**2;
+
+                console.log(name,weight,heght,bmi);
+
+                if(isNaN(bmi)){
+                    alert("身高/體重只能輸入數字!");
+                }else{
+                    document.write(`<h1>名字:${name}</h1>`);
+                    document.write(`<li>體重:${weight}</li>`);
+                    document.write(`<li>身高:${heght}</li>`);
+                    document.write(`<li>BMI:${bmi}</li>`);
+                    //  count+=1
+                    count++;
+                    total+=bmi;
+                }
+            }
+            
+        }
+
+        // 輸出平均BMI
+        document.write(`<h1>平均BMI:${(total/count).toFixed(2)}</h1>`);
+
+        // def usValid(value):
+        //     return value>=1 and value<=500
+
+        function isValid(value,start,end){
+            return value>=start && value<=end;
+        }
+
     </script>
 </body>
 </html>
